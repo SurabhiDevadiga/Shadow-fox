@@ -1,0 +1,96 @@
+A. Matplotlib Graphs 
+  1. Line Plot 
+  • Description: 
+  A line plot connects individual data points with straight lines. It is widely 
+  used to show trends over time (time-series data) or changes in a variable. 
+  • Use Case: 
+  Tracking stock prices, temperature over days, or sales over months. 
+
+  
+        import matplotlib.pyplot as plt 
+        x = [1, 2, 3, 4, 5] 
+        y = [2, 4, 6, 8, 10] 
+        plt.plot(x, y, marker='o', color='blue', linestyle='--') 
+        plt.title("Line Plot Example") 
+        plt.xlabel("X-axis") 
+        plt.ylabel("Y-axis") 
+        plt.grid(True) 
+        plt.show()
+
+2. Scatter Plot 
+  • Description: 
+  A scatter plot displays individual data points in a 2D space. It helps visualize 
+  relationships, clusters, or outliers. 
+  • Use Case: 
+  Checking correlation between income vs. expenditure, or height vs. weight. 
+
+  
+    import matplotlib.pyplot as plt    
+    x = [5, 7, 8, 7, 6, 9, 5] 
+    y = [99, 86, 87, 88, 100, 86, 103] 
+    plt.scatter(x, y, color='red', marker='x') 
+    plt.title("Scatter Plot Example") 
+    plt.xlabel("X-axis") 
+    plt.ylabel("Y-axis") 
+    plt.show()
+
+3. Bar Chart 
+  • Description: 
+  A bar chart uses rectangular bars to represent categorical data. Bar lengths represent 
+  values. 
+  • Use Case: 
+  Comparing sales across product categories, or population across countries. 
+
+  
+    import matplotlib.pyplot as plt    
+    categories = ['A', 'B', 'C'] 
+    values = [10, 24, 36] 
+    plt.bar(categories, values, color='green') 
+    plt.title("Bar Chart Example") 
+    plt.xlabel("Category") 
+    plt.ylabel("Values") 
+    plt.show()
+
+4. Histogram 
+  • Description: 
+  A histogram shows the distribution of data by dividing it into bins. Useful for identifying 
+  skewness, normality, and spread of data. 
+  • Use Case: 
+  Understanding exam score distributions, income levels, or sensor measurements. 
+
+    import matplotlib.pyplot as plt 
+    import numpy as np    
+    data = np.random.randn(1000) 
+    plt.hist(data, bins=30, color='skyblue', edgecolor='black') 
+    plt.title("Histogram Example") 
+    plt.xlabel("Value Ranges") 
+    plt.ylabel("Frequency") 
+    plt.show() 
+
+5. Pie Chart 
+  • Description: 
+  A pie chart represents percentage share of different categories. 
+  • Use Case: 
+  Market share of companies, survey responses, or budget allocations. 
+
+import matplotlib.pyplot as plt 
+import numpy as np    
+sizes = [30, 20, 50] 
+labels = ['Apples', 'Bananas', 'Cherries'] 
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, 
+colors=['red','yellow','green']) 
+plt.title("Pie Chart Example") 
+plt.show() 
+
+
+
+
+
+
+
+
+
+
+  
+
+  

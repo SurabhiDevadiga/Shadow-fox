@@ -1,0 +1,16 @@
+Matplotlib: 
+  • Introduction: 
+    Matplotlib is the foundation of Python visualization. It mimics MATLAB-style 
+    plotting and provides the most control over figure elements. It is a low-level 
+    library, meaning users must explicitly define details like axis labels, colors, and 
+    markers, which offers maximum flexibility at the cost of verbosity. 
+  • Unique Features: 
+    o Can create virtually any 2D visualization (and limited 3D plots via 
+    mpl_toolkits). 
+    o Integrates with NumPy arrays and Pandas DataFrames. 
+    o Allows exporting figures in multiple formats (PNG, PDF, SVG). 
+    o Supports animations and interactive visualizations in Jupyter notebooks. 
+    • Typical Use Cases: 
+    o Academic research papers needing precise control. 
+    o Data scientists wanting publication-ready plots. 
+    o Developers needing custom visualizations integrated into applications. 

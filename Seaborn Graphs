@@ -1,0 +1,114 @@
+1. Line Plot: 
+    • Description: 
+    Seaborn line plots extend Matplotlib by adding statistical estimations and confidence 
+    intervals automatically. 
+    • Use Case: 
+    Visualizing trends while accounting for statistical variation. 
+
+
+    import seaborn as sns 
+    import matplotlib.pyplot as plt 
+    tips = sns.load_dataset("tips") 
+    sns.lineplot(x="size", y="total_bill", data=tips, marker="o", color="blue") 
+    plt.title("Seaborn Line Plot Example") 
+    plt.savefig("plot.png")  
+
+
+2. Scatter Plot 
+    • Description: 
+    Seaborn’s scatter plots support grouping using the hue, style, and size arguments. 
+    • Use Case: 
+    Comparing spending habits by gender or class in datasets. 
+
+
+    import seaborn as sns 
+    import matplotlib.pyplot as plt 
+    import pandas as pd 
+    tips = pd.DataFrame({ 
+    "total_bill": [16, 35, 40, 20, 60, 28, 45, 33, 50, 22], 
+    "tip":     
+    "sex":        
+       [2, 5, 6, 3, 10, 4, 7, 5, 8, 3], 
+    ["Male", "Female", "Male", "Male", "Female", "Female", "Male", 
+    "Female", "Male", "Female"], 
+    "time":      
+     ["Lunch", "Dinner", "Dinner", "Lunch", "Dinner", "Lunch", 
+    "Dinner", "Dinner", "Lunch", "Lunch"] 
+    }) 
+    sns.scatterplot(x="total_bill", y="tip", hue="sex", style="time", data=tips, s=100) 
+    plt.title("Scatter Plot with Hue & Style") 
+    plt.show()
+
+
+3. Bar Plot 
+    • Description: 
+    Unlike Matplotlib, Seaborn’s bar plots include confidence intervals to show uncertainty. 
+    • Use Case: 
+    Comparing average sales per day with variation included. 
+
+
+      import matplotlib.pyplot as plt 
+      import seaborn as sns 
+      tips = sns.load_dataset("tips") 
+      sns.lineplot(x="size", y="total_bill", data=tips, marker="o", color="blue") 
+      plt.title("Seaborn Line Plot Example") 
+      plt.show() 
+      sns.scatterplot(x="total_bill", y="tip", hue="sex", style="time", data=tips) 
+      plt.title("Seaborn Scatter Plot Example") 
+      plt.show() 
+      sns.barplot(x="day", y="total_bill", data=tips, ci="sd", palette="Set2") 
+      plt.title("Seaborn Bar Plot Example") 
+      plt.show() 
+      sns.histplot(tips["total_bill"], bins=30, kde=True, color="purple") 
+      plt.title("Seaborn Histogram + KDE Example") 
+      plt.show() 
+      sns.boxplot(x="day", y="total_bill", data=tips, palette="coolwarm") 
+      plt.title("Seaborn Box Plot Example") 
+      plt.show() 
+      sns.violinplot(x="day", y="total_bill", data=tips, palette="Set3") 
+      plt.title("Seaborn Violin Plot Example") 
+      plt.show() 
+      corr = tips.corr(numeric_only=True) 
+      sns.heatmap(corr, annot=True, cmap="Blues") 
+      plt.title("Seaborn Heatmap Example") 
+      plt.show()
+
+
+
+4. Histogram (Distribution Plot) 
+    • Description: 
+    Seaborn’s histplot combines histograms with optional KDE (Kernel Density Estimation) 
+    to visualize probability density. 
+    • Use Case: 
+    Analyzing income distribution, scores, or waiting times. 
+
+
+      import seaborn as sns 
+      import matplotlib.pyplot as plt 
+      tips = sns.load_dataset("tips") 
+      sns.histplot(tips["total_bill"], kde=True, bins=20, color="purple") 
+      plt.title("Histogram with KDE") 
+      plt.show() 
+
+
+
+5. Box Plot 
+      • Description: 
+      Box plots show the spread, quartiles, and outliers in data. 
+      • Use Case: 
+      Comparing salaries across departments, or tips across days. 
+
+
+          import seaborn as sns 
+          import matplotlib.pyplot as plt 
+          tips = sns.load_dataset("tips") 
+          sns.boxplot(x="day", y="total_bill", data=tips, palette="pastel") 
+          plt.title("Box Plot Example") 
+          plt.show()
+
+
+
+
+
+
+
